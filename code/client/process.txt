@@ -1,0 +1,33 @@
+Quy trình tạo test :
+  B1 : Nhập các trường :
+    - Tên bài thí nghiệm
+    - Loại bài thí nghiệm (MOS mặc định)
+
+
+  public test cần:
+  - Tên bài test
+  - type : MOS
+  - file zip
+  - số bộ test
+  - mỗi bộ test có bao nhiêu audio / mỗi người sẽ nghe bao nhiêu audio
+
+
+  private test cần :
+  - Tên bài test
+  - type : MOS
+  - file zip
+  - chỉ định những người tham gia test
+  - mỗi audio được nghe bởi bn người
+
+
+với các test:
+  - chia đều audio ra các bài test sao cho balance
+  - mỗi người tham gia test đấy sẽ làm 1 trong các bài test kia
+
+
+lưu ý, việc chia audio có thể sử dụng thuật toán leo đồi / tabu search (Bài toán MIP)
+
+thuật chia test:
+ - đầu tiên shuffle các audio của các đội;
+ - sau đó concat các array audio các đội lại với nhau
+ - cuối cùng với mỗi audio, chia các audio theo vòng tròn

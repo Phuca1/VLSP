@@ -1,0 +1,6 @@
+ - cần fix các giai đoạn, lúc bắt đầu giai đoạn mới thì đóng giai đoạn cũ đi, ví dụ như từ ngày bắt đầu thẩm định,
+ không cho các đội khác đăng kí tham gia nữa 
+
+ - check lại lỗi tại sao 1 user có thể đăng kí cuộc thi 2 lần ?
+
+

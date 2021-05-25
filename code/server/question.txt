@@ -1,0 +1,49 @@
+? Cách chia audio cho các đội thẩm định ?  -> đánh đổi
+    + Nếu chia audio cho các đội cố định ngay từ ban đầu, thì sẽ khó balance được giữa các audio 
+    + Nếu các đội thẩm định đến đâu mới phân audio đến đấy thì cách thẩm định lại phải cố định, tức là 
+    các đội sẽ phải thẩm định 1 loạt từ đầu đến cuối và các thành viên không thể chọn câu để thẩm định.
+    Dẫn đến việc thẩm định sẽ mất nhiều thời gian nếu số audio nhiều lên.
+    Đồng thời các thành viên cùng vào thẩm định 1 lúc sẽ bị conflict  
+    (nêu làm kiểu này thì mỗi đội có 1 tài khoản riêng sẽ tốt hơn, nhưng sẽ không hợp lý và dư thừa)
+
+? Sau khi các đội thẩm định dữ liệu xong, admin chia sẻ dữ liệu huấn luyện sẽ lấy thẳng từ dữ liệu đã thẩm định đó? 
+Hay admin sẽ upload file dữ liệu để chia sẻ ? 
+
+
+Quy trình tạo test :
+ 
+  B1 : Admin tạo test, bao gồm các trường: 
+
+  B2 : TTS manager sẽ config bài thí nghiệm : 
+    - Tên test 
+    - Cuộc thi gắn với test (option ??? có nhất thiết phải gắn với cuộc thi không? ) (****)
+    - Chỉ định người phụ trách cuộc thi 
+    - Ngày bắt đầu cuộc thi 
+    - Ngày kết thúc cuộc thi 
+    - Cuộc thi public hay private (nếu private thì sẽ chỉ định người tham gia)
+    - Số audio ít nhất mỗi người phải nghe 
+    - Mỗi audio phải được nghe bởi ít nhất bao nhiêu người 
+    - Upload file zip audios  
+
+  B3 : User vào tham gia cuộc thi :
+    - Sẽ không cần chọn câu để làm mà sẽ thực hiện test từ câu 1 đến câu cuối 
+    - Đang làm dở câu nào thì sẽ lưu lại hôm sau làm tiếp câu đó
+    - Những ai đã đăng kí cuộc thi đấy rồi thì sẽ không được làm test => phải chọn cuộc thi ở B1 (****) để 
+    hệ thống có thể lọc ra những người ko tham gia cuộc thi.
+
+Problem : 
+    - Nếu tách 2 role admin và testManagement như thế này thì 1 trong 2 sẽ có giao diện cực kì đơn giản => khó design?
+    - role test Management sẽ đăng kí tài khoản như thế nào ?
+    - role test Management sẽ chỉ có duy nhất 1 chức năng là quản lý test ? 
+    - Admin có thực sự cần chức năng Test Management và có cần theo dõi chi tiết từng test hay chỉ cần tạo test là đủ 
+    - Giao diện của Test Management sẽ như thế nào ? 
+        -> Khi đăng nhập vào sẽ nhìn thấy 1 list các Test được admin phân và bấm vào để config test và config 1 
+        lần duy nhất ? (việc config nhiều lần sẽ rất mất công vì phải chia lại audio, xóa file cũ, update DB)
+    - 1 Vấn đề lớn là cách chia audio sao cho tối ưu và có sự balance giữa các audio ?
+        + không chắc chắn những người được chỉ định làm test thì sẽ làm hết được các test 
+        -> vì sự không chắc chắn nên audio chia càng random càng tốt 
+        -> một cách khác là khi user làm test đến câu nào thì mới phân câu đấy chứ không cố định từ đầu. 
+    
+
+  - Có cần thiết đặt ra các tiêu chuẩn để được nộp kết quả không, hay 1 đội không có dữ liệu huấn luyện, 
+  vẫn được phép nộp kết quả ?

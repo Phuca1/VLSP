@@ -1,0 +1,31 @@
+- ở phần đăng kí team thêm debounce hook phần thêm thành viên
+
+- bỏ phần progress ở chia sẻ dữ liệu huấn luyện, thêm phần chọn ngưỡng hoàn tất data
+
+- hết thời hạn đkí thì ko cho đăng kí nữa
+
+- Sửa lỗi bị dịch xuống 1 ngày ở CreateTaskVerifyData  của admin
+
+- Delay khi chuyển audio
+
+- Tạo thanh progress khi upload data training
+
+- Khi request dữ liệu phải redirect về cuộc thi
+
+- Khi nộp commitment sẽ lấy bản scan có sẵn
+
+- Giới hạn thời gian tải dữ liệu huấn luyện
+
+ - bảng audio in test :
+     - thêm search vào tên audio, tên file text, giọng, điểm trung bình (search by band)
+     - combobox hiện tất cả
+     - tooltip hiện text
+     - icon nghe audio
+     - id người dùng
+     - search theo người dùng
+
+ - tạo cuộc thi, phần process chuyển thành timeline
+ - đổi competition -> campaign
+
+
+ - phát sinh vấn đề : trong phần test, có gửi kết quả test cho các đội.

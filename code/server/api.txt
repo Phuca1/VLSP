@@ -1,0 +1,16 @@
+ .../api
+    auth :"/auths": 
+        POST : "/login"  : login
+        POST : /signup  : signup
+        GET : "/verify" : verify token
+        PATCH: "/change-password" :  change password 
+    
+    user : "/users" :
+        GET : "/" : get all user 
+        GET : "/:uid" : get info of user have id -> uid
+        PATCH : "/lock-user" : deactive an user (change active to false)
+        PATCH : "/unlock-user" : active user 
+        PATCH : "/update" : update information of user who sent the request
+    
+    team : "/team" :
+        POST : "/create" : create team  
